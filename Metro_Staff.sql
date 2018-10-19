@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 19, 2018 at 03:08 AM
+-- Generation Time: Oct 19, 2018 at 03:32 AM
 -- Server version: 5.7.23-0ubuntu0.16.04.1-log
 -- PHP Version: 7.1.23
 
@@ -32,7 +32,9 @@ CREATE TABLE `Metro_Staff` (
   `id` int(11) NOT NULL,
   `name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   `gender` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `age` int(11) NOT NULL,
+  `DOB` date NOT NULL,
+  `phonenumber` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `address` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
   `position` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -40,12 +42,12 @@ CREATE TABLE `Metro_Staff` (
 -- Dumping data for table `Metro_Staff`
 --
 
-INSERT INTO `Metro_Staff` (`id`, `name`, `gender`, `age`, `position`) VALUES
-(1, 'Mike', 'Male', 28, 'Manager'),
-(2, 'Lily', 'Female', 27, 'Manager'),
-(3, 'Jack', 'Male', 25, 'Manager'),
-(4, 'Rose', 'Female', 24, 'Manager'),
-(5, 'Sam', 'Male', 30, 'Cleanner');
+INSERT INTO `Metro_Staff` (`id`, `name`, `gender`, `DOB`, `phonenumber`, `address`, `position`) VALUES
+(1, 'Mike', 'Male', '1990-01-01', '147852', 'Chenghua District, Chengdu', 'Manager'),
+(2, 'Lily', 'Female', '1991-02-02', '136952', 'Qingyang District, Chengdu', 'Manager'),
+(3, 'Jack', 'Male', '1992-02-02', '123445', 'Wuhou District, Chengdu', 'Manager'),
+(4, 'Rose', 'Female', '1991-03-03', '123456', 'Chenghua District, Chengdu', 'Manager'),
+(5, 'Sam', 'Male', '1989-03-03', '123666', 'Gaoxin District, Chengdu', 'Cleanner');
 
 --
 -- Indexes for dumped tables
